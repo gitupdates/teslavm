@@ -1,0 +1,292 @@
+#create-vm-overlay, #edit-vm-overlay {
+    position: fixed;
+    /* Sit on top of the page content */
+    display: none;
+    /* Hidden by default */
+    width: 100%;
+    /* Full width (cover the whole page) */
+    height: 100%;
+    /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.75);
+    /* Black background with opacity */
+    z-index: 2;
+    /* Specify a stack order in case you're using a different order for other elements */
+}
+#closeoverlay {
+    margin-top: 45px;
+    margin-left: 1150px;
+    position: absolute;
+}
+#optional-features, #cpu-ram-configuration, #intro-creation {
+    position: absolute;
+    top: 67px;
+    left: 244px;
+}
+#name-of-guest {
+    font-size: 14px!important;
+    margin-left: 166px!important;
+    margin-right: -337px!important;
+    border-radius: 9px!important;
+    border-style: solid!important;
+    border-color: rgba(0,0,0,0.1)!important;
+    margin-bottom: -5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-indent: 4px;
+    background-color: #3c3c3c;
+    color: floralwhite;
+}
+#name-of-guest:focus {
+    font-size: 14px!important;
+    margin-left: 166px!important;
+    margin-right: -337px!important;
+    border-radius: 9px!important;
+    border-style: solid!important;
+    border-color: rgba(0,0,0,0.1)!important;
+    margin-bottom: -5px;
+    outline: none;
+}
+.sidebar {
+    margin-top: -36px;
+}
+#edit-vm {
+    position: absolute;
+    top: 16px!important;
+    left: 257px!important;
+}
+i {
+    cursor: pointer;
+}
+#dangeralert {
+    display: none;
+    width: 227px;
+    height: 55px;
+    margin-top: 12px;
+    margin-left: 539px;
+    margin-bottom: 10px;
+}
+@-webkit-keyframes fadeOut{
+    100%{
+        opacity:1
+    }
+    0%{
+        opacity:0
+    }
+}
+*:focus {
+    outline: none;
+}
+body {
+    background-color: rgb(200,200,200);
+}
+
+.window-controls {
+    height: 100%;
+    font-size: 0px;
+    -webkit-app-region: no-drag;
+    --window-control-bg: #fff;
+}
+[class^="window-control-"] {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    width: 35px;
+    height: 100%;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    font-size: 15px;
+    font-style: normal;
+    cursor: default;
+    vertical-align: top;
+}
+.window-control-restore:hover:before, .window-control-restore:hover:after, .window-control-maximize:hover:after, .window-controls i:hover {
+    background: #CCC;
+}
+.window-control-restore:active:before, .window-control-restore:active:after, .window-control-maximize:active:after, .window-controls i:active {
+    background: #BBB;
+}
+.window-control-minimize:before, .window-control-restore:before, .window-control-restore:after, .window-control-maximize:after, .window-control-close:before, .window-control-close:after {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-width: 0px;
+    border-style: solid;
+    border-color: #000;
+}
+.window-control-minimize:before {
+    border-bottom-width: 1px;
+}
+.window-control-restore:before, .window-control-restore:after, .window-control-maximize:after {
+    background: var(--window-control-bg);
+    border-width: 1px;
+    z-index: 2;
+}
+.window-control-restore:before {
+    position: absolute;
+    top: 8px;
+    margin-left: 4px;
+}
+.window-control-close {
+    position: relative;
+}
+.window-control-close:before, .window-control-close:after {
+    position: absolute;
+    top: 12px;
+    left: 17px;
+    width: 1px;
+    border-left-width: 1px;
+}
+.window-control-close:before {
+    transform: rotate(45deg);
+}
+.window-control-close:after {
+    transform: rotate(-45deg);
+}
+#content {
+    /* background-color: transparent;
+     */
+    background-image: linear-gradient(254deg, #242424 10%, #1e1e1e 100%)!important;
+    background-size: cover;
+}
+.card {
+    background-image: linear-gradient(176deg, #2c2c2c 10%, #282828 100%);
+    border: transparent;
+}
+.py-3 {
+    background: #242424;
+    border: none;
+}
+.progress {
+    background: #444;
+}
+#menu-bar {
+    background-image: linear-gradient(254deg, #242424 10%, #1e1e1e 100%)!important;
+}
+.window-control-minimize {
+    background: #242424;
+}
+.window-control-close {
+    background: #242424;
+    color: white;
+}
+.window-control-minimize:before, .window-control-restore:before, .window-control-restore:after, .window-control-maximize:after, .window-control-close:before, .window-control-close:after {
+    border-color: #fff;
+}
+#content-wrapper {
+    background-color: #222!important;
+    padding-top: 0px!important;
+}
+.text-primary {
+    color: #ffa500e0!important;
+}
+.text-success {
+    color: #ffa500e0!important;
+}
+.btn-primary {
+    background-color: #a56b00e0!important;
+    border: transparent;
+}
+.storagerow {
+    margin-top: 12px;
+}
+table {
+    border: none;
+}
+th {
+    border-color: rgb(60, 60, 60);
+}
+tr {
+    border-color: rgb(60, 60, 60);
+}
+.fas {
+    color: #666;
+}
+
+
+#content {
+    animation: fadeIn 0.3s;
+    background-image: linear-gradient(254deg, #242424 10%, #1e1e1e 100%)!important;
+}
+
+#cardheader {
+    height: 53px;
+    margin-top: -15px!important;
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity:0
+    }
+    100%{
+        opacity:1
+    }
+}
+
+.dropdown-menu, show {
+    background-color: #333333;
+    border-color: #555555;
+    animation: fadeIn 0.1s;
+}
+
+.dropdown-item {
+    color: whitesmoke;
+}
+
+.dropdown-item:hover {
+    background-color: #333333;
+    color: darkorange!important;
+}
+
+#memslider::-webkit-slider-runnable-track {
+     background-color: #717171;
+ }
+
+#memslider::-webkit-slider-thumb {
+    background-color: #b4b4b4;
+}
+
+#cpuslider::-webkit-slider-runnable-track {
+    background-color: #717171;
+}
+
+#cpuslider::-webkit-slider-thumb {
+    background-color: #b4b4b4;
+}
+
+#create-vm-overlay,create-new-machine-overlay,cpu-ram-configuration,optional-features,dangeralert {
+    animation: fadeIn 0.2s;
+}
+
+.wybieracz {
+    animation: fadeIn 0.1s;
+    background-color: #333333;
+    color: whitesmoke;
+    appearance: none;
+    outline: none;
+    text-decoration: none;
+    border: none transparent;
+}
+
+.form-check-input {
+    background: #464646;
+}
+
+.form-check-input:checked {
+    background: #3d3d3d;
+}
+
+.card shadow border-start-primary py-2 {
+    border: none!important;
+    outline: none!important;
+}
+
+.fa-compact-disc:before {
+    color: #b1b1b1;
+}

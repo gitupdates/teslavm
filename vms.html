@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>TeslaVM</title>
     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/bootstrap/css/css.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel&amp;display=swap">
@@ -31,22 +32,22 @@
     <div id="gotcha">
         <div id="edit-vm-overlay">
             <div id="edit-vm">
-                <div class="card shadow mb-5" style="width: 480px;height: 266px;margin: 137px;"> 
+                <div class="card shadow mb-5" style="width: 480px;height: 266px;margin: 137px;">
                     <div class="card-header py-3">
                         <p id="editparag" class="text-primary m-0 fw-bold">Editing guestname</p>
                     </div>
                     <div class="card-body">
                         <div style="margin-left: 0;margin-top: 0;width: 101px;">
-                            <p style="width: 45px;margin-top: -2px;margin-bottom: -23px;">CPU</p><input autocomplete="off"  type="number" style="width: 43px;margin-left: 45px;margin-top: -23px;border-radius: 5px;border-width: 1px;border-color: rgba(0,0,0,0.3);">
+                            <p style="width: 45px;margin-top: -2px;margin-bottom: -23px;">CPU</p><input autocomplete="off"  class="wybieracz" type="text" style="width: 43px;margin-left: 45px;margin-top: -23px;border-radius: 5px;border-width: 1px;border-color: rgba(0,0,0,0.3);">
                         </div>
                         <div style="margin-left: 105px;margin-top: -27px;width: 101px;">
-                            <p style="width: 45px;margin-top: -2px;margin-bottom: -23px;">RAM</p><input autocomplete="off"  type="number" style="width: 43px;margin-left: 45px;margin-top: -23px;border-radius: 5px;border-width: 1px;border-color: rgba(0,0,0,0.3);">
+                            <p style="width: 45px;margin-top: -2px;margin-bottom: -23px;">RAM</p><input autocomplete="off" class="wybieracz" type="text" style="width: 55px;margin-left: 45px;margin-top: -23px;border-radius: 5px;border-width: 1px;border-color: rgba(0,0,0,0.3);">
                         </div>
-                        <div class="dropdown"><button class="btn btn-primary dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" type="button" style="font-size: 13px;margin-left: 211px;margin-top: -53px;">Graphic Card</button>
+                        <div class="dropdown"><button class="btn btn-primary dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" type="button" style="font-size: 13px;margin-left: 226px;margin-top: -53px;">Graphic Card</button>
                             <div class="dropdown-menu" style="margin-top: -27px;"><a class="dropdown-item" href="#">Virtio</a><a class="dropdown-item" href="#">VGA</a><a class="dropdown-item" href="#">Cirrus</a><a class="dropdown-item" href="#">QXL</a><a class="dropdown-item" href="#">SVGA VMware</a></div>
                         </div>
-                        <div class="dropdown" style="margin-top: -24px;margin-left: 128px;"><button class="btn btn-primary dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" type="button" style="font-size: 13px;margin-left: 211px;margin-top: -53px;">Accelerator</button>
-                            <div class="dropdown-menu" style="margin-top: -29px;"><a class="dropdown-item" href="#">Tiny Code Generator</a><a class="dropdown-item" href="#">Intel Hardware Acceleration (HAXM)</a><a class="dropdown-item" href="#">Hyper-V</a></div>
+                        <div class="dropdown" style="margin-top: -24px;margin-left: 128px;"><button class="btn btn-primary dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" type="button" style="font-size: 13px;margin-left: 220px;margin-top: -53px;">Accelerator</button>
+                            <div class="dropdown-menu" style="margin-top: -29px;"><a class="dropdown-item" href="#">Intel Hardware Acceleration (HAXM)</a><a class="dropdown-item" href="#">Hyper-V</a></div>
                         </div>
                         <div style="width: 106px;">
                             <p style="width: 76px;margin-bottom: -23px;">CD-ROM</p><label><i class="fas fa-compact-disc" style="font-size: 23px;margin-top: -2px;margin-left: 76px;"></i><input autocomplete="off"  type="file" hidden></label>
@@ -69,9 +70,9 @@
                 </div>
                 <!-- Create new machine intro -->
                 <div id="intro-creation" style="display: block;">
-                        <div class="d-flex flex-column" id="content-wrapper">
+                    <div class="d-flex flex-column" id="content-wrapper" style="height: 0px;">
                             <div class="card shadow mb-5" style="margin-bottom: 20px;margin-top: 15px;width: 809px;height: 454px;">
-                                <div class="card-header py-3" style="height: 55px;">
+                                <div class="card-header py-3" id="cardheader" style="height: 55px;">
                                     <p class="text-primary m-0 fw-bold">Create new machine</p>
                                 </div>
                                 <div class="card-body" style="height: 519px;border-color: #ffffff;">
@@ -82,7 +83,7 @@
                                     <div class="dropdown" style="padding-left: 126px;margin-top: -28px;"><button class="btn btn-primary dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" type="button" style="margin-top: -22px;font-size: 14px;width: 166.375px;margin-left: -2px;margin-bottom: 5px;">Operating systems</button>
                                         <div class="dropdown-menu"><a class="dropdown-item" onclick="selectwindows();" href="#">Windows</a><a class="dropdown-item" onclick="selectlinux();" href="#">Linux</a></div>
                                     </div>
-                                
+
                                     <button class="btn btn-primary" type="button" onclick="next();" style="margin-left: 711px;margin-top: 122px;">Next</button><button class="btn btn-primary" type="button" onclick="close_vm_overlay()" style="margin-left: 620px;margin-top: -65px;">Cancel</button>
                                 </div>
                             </div>
@@ -108,7 +109,7 @@
                             <p>Recommended core allocation is 2 - 4</p>
 
                             <input autocomplete="off"  id="cpuslider" min="1" class="form-range" type="range" style="width: 707px;">
-                            
+
                             <p id="core-ammount" style="width: 78px;margin-left: 721px;margin-top: -30px;">1 Core(s)</p>
                             <button class="btn btn-primary" onclick="next();" type="button" style="margin-left: 711px;margin-top: 61px;">Next</button>
                             <button class="btn btn-primary" type="button" onclick="close_vm_overlay()" style="margin-left: 620px;margin-top: -65px;">Cancel</button>
@@ -127,7 +128,7 @@
                             <p style="margin-bottom: 17px;font-size: 22px;text-align: center;padding-bottom: 16px;">Optional features</p>
                             <p style="width: 162px;">Hardware accelerator</p>
                             <div class="dropdown"><button class="btn btn-primary dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" type="button" style="margin-left: 165px;margin-top: -81px;font-size: 13px;">Guest acceleration</button>
-                                <div class="dropdown-menu" style="margin-top: -31px;"><a class="dropdown-item" onclick="hax()" href="#">HAXM (Virtualization for intel processors, best for Linux)</a><a class="dropdown-item" onclick="hyperv()" href="#"><span style="color: rgb(0, 0, 0);">Hyper-V (for AMD/Intel best for Windows)</span><br></a></div>
+                                <div class="dropdown-menu" style="margin-top: -31px;"><a class="dropdown-item" onclick="hax()" href="#">HAXM (Virtualization for intel processors, best for Linux)</a><a class="dropdown-item" onclick="hyperv()" href="#"><span style="">Hyper-V (for AMD/Intel best for Windows)</span><br></a></div>
                             </div>
                             <p style="width: 152px;">Graphics accelerator</p>
                             <div class="dropdown"><button class="btn btn-primary dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" type="button" style="font-size: 13px;margin-left: 165px;margin-top: -81px;">Graphic cards</button>
@@ -159,7 +160,7 @@
                     </ul>
                 </div>
             </div>
-        
+
             <div class="d-flex flex-column" id="content-wrapper" style="padding-top: 20px;">
                 <div id="content">
                     <div class="container-fluid">

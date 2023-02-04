@@ -15,10 +15,10 @@ function editvm(guestname) {
             var json = JSON.parse(data)
             var editItem = null;
             for (let i = 0; i < json.length; i++) {
-                if (json[i].guestname == guestname) {
+                if (json[i].guestname === guestname) {
                     editItem = i;
                 }
-            }     
+            }
             
             document.getElementById("cdrom").value = json[editItem].cdrom;
             document.getElementById("hdd").value =  json[editItem].hdd;

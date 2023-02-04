@@ -16,7 +16,7 @@ async function runguest(name, ostype, osver, ram, cpu, accel, gpu, border) {
             var json = JSON.parse(data)
             var editItem = null;
             for (let i = 0; i < json.length; i++) {
-                if (json[i].guestname == name) {
+                if (json[i].guestname === name) {
                     editItem = i;
                 }
             }    
@@ -99,7 +99,7 @@ async function runguest(name, ostype, osver, ram, cpu, accel, gpu, border) {
                         console.log(stderr)
                     } else if (stderr.includes("audio: Failed to create voice")){
                         alert("You should plug in your microphone to prevent from error spam.")
-                    } else if(stderr == "" || stderr == undefined) {
+                    } else if(stderr === "" || stderr === undefined) {
                         console.log("empty stderr")
                     } else if (stderr.includes("Image is not in qcow2 format")) {
                         alert("Only qcow2 format is supported for now.")

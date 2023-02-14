@@ -50,10 +50,10 @@
                             <div class="dropdown-menu" style="margin-top: -29px;"><a class="dropdown-item" href="#">Intel Hardware Acceleration (HAXM)</a><a class="dropdown-item" href="#">Hyper-V</a></div>
                         </div>
                         <div style="width: 106px;">
-                            <p style="width: 76px;margin-bottom: -23px;">CD-ROM</p><label><i class="fas fa-compact-disc" style="font-size: 23px;margin-top: -2px;margin-left: 76px;"></i><input autocomplete="off"  type="file" hidden></label>
+                            <p style="width: 76px;margin-bottom: -23px;">CD-ROM</p><label><i class="fas fa-compact-disc" style="font-size: 23px;margin-top: -2px;margin-left: 76px;"></i><input autocomplete="off" id="cdrom-input" accept=".iso" onchange="pickfilecdrom()" type="file" hidden></label>
                         </div>
                         <div style="width: 106px;margin-top: -28px;margin-left: 118px;">
-                            <p style="width: 84px;margin-bottom: -23px;">Hard-Drive</p><label><i class="far fa-hdd" style="font-size: 21px;margin-top: 2px;margin-left: 88px;"></i><input autocomplete="off"  type="file" hidden></label>
+                            <p style="width: 84px;margin-bottom: -23px;">Hard-Drive</p><label><i class="far fa-hdd" style="font-size: 21px;margin-top: 2px;margin-left: 88px;"></i><input id="hdd-input" autocomplete="off" accept=".qcow2" onchange="pickfilehdd()" type="file" hidden></label>
                         </div>
                         <div class="form-check" style="width: 74px;margin-top: -28px;margin-left: 249px;"><input autocomplete="off"  class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Audio</label></div>
                         <div class="form-check" style="width: 74px;margin-top: -26px;margin-left: 334px;"><input autocomplete="off"  class="form-check-input" type="checkbox" id="formCheck-2"><label class="form-check-label" for="formCheck-2" style="width: 92px;">Enable UEFI</label></div><button class="btn btn-primary" type="button" onclick="finishediting()" style="margin-top: 66px;margin-left: 186px;">Finish</button>

@@ -1,1 +1,1 @@
-[{"guestname":"Ubuntu 18.04","ostype":"linux","ram":"4350","cpu":"4","accel":"hax","gpu":"virtio","cdrom":"","hdd":"","bootorder":""}]
+[{"guestname":"Windows 11","ostype":"windows","ram":"4906","cpu":"4","accel":"whpx","gpu":"qxl","cdrom":"C:\\Users\\Administrator\\Downloads\\kubuntu-22.10-desktop-amd64.iso","hdd":"","bootorder":"-boot order=c"}]

@@ -1,9 +1,23 @@
+var globalcdrom = "";
+var globalhdd = "";
+var bootorder = "-boot order=c"
+
 function pickfilecdrom() {
-    document.getElementById("cdrom").value = document.getElementById("cdrom-input").value;
+    if (document.getElementById("cdrom-input").value !== undefined) {
+        globalcdrom = document.getElementById("cdrom-input").value;
+    } else {
+        globalcdrom = ""
+    }
+    console.log(globalcdrom);
 }
 
 function pickfilehdd() {
-    document.getElementById("hdd").value = document.getElementById("hdd-input").value;
+    if (document.getElementById("hdd-input").value !== undefined) {
+        globalhdd = document.getElementById("hdd-input").value;
+    } else {
+        globalhdd = ""
+    }
+    console.log(globalcdrom);
 }
 
 function editvm(guestname) {
@@ -33,10 +47,11 @@ function editvm(guestname) {
 }
 
 function finishediting() {
+
     document.getElementById("edit-vm-overlay").style = "display: none"
     document.getElementById("edit-vm").style = "display: none;"
 
-    console.log(bootorder, document.getElementById("hdd-input").value, document.getElementById("cdrom-input").value);
+    console.log(bootorder ,document.getElementById("hdd-input").value, document.getElementById("cdrom-input").value);
 
     var dupa = document.getElementById("editparag").innerHTML.split("Editing ")[1]
 
@@ -55,8 +70,8 @@ function finishediting() {
 
             
             console.log(editItem)
-            json[editItem].cdrom = document.getElementById("cdrom").value;
-            json[editItem].hdd = document.getElementById("hdd").value;
+            json[editItem].cdrom = globalcdrom;
+            json[editItem].hdd = globalhdd;
             if (bootorder == "") {
                 json[editItem].bootorder = "";
             } else {

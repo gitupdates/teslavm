@@ -1,4 +1,4 @@
-#create-vm-overlay, #edit-vm-overlay {
+#create-vm-overlay, #edit-vm-overlay, #create-storage-overlay {
     position: fixed;
     /* Sit on top of the page content */
     display: none;
@@ -26,7 +26,7 @@
     top: 67px;
     left: 244px;
 }
-#name-of-guest {
+#name-of-guest,#name-of-disk {
     font-size: 14px!important;
     margin-left: 166px!important;
     margin-right: -337px!important;
@@ -40,7 +40,7 @@
     background-color: #3c3c3c;
     color: floralwhite;
 }
-#name-of-guest:focus {
+#name-of-guest:focus,#name-of-disk:focus {
     font-size: 14px!important;
     margin-left: 166px!important;
     margin-right: -337px!important;
@@ -257,6 +257,14 @@ tr {
 }
 
 #cpuslider::-webkit-slider-thumb {
+    background-color: #b4b4b4;
+}
+
+#sizeslider::-webkit-slider-runnable-track {
+    background-color: #717171;
+}
+
+#sizeslider::-webkit-slider-thumb {
     background-color: #b4b4b4;
 }
 

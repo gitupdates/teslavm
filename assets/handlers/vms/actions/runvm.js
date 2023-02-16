@@ -29,12 +29,10 @@ async function runguest(name, ostype, osver, ram, cpu, accel, gpu, border) {
             console.log(cdrom)
 
             //generate final command
-
             var smbios = "-smbios type=0,vendor=teslavirtualization,version=2.1 -smbios type=1,manufacturer=teslavirtualization,product=teslavirtualization,version=2.1"
             var portforward = "-net user,hostfwd=tcp::3388-:3389 -net nic"
-            var drivers = accel === "whpx" ? "-drive file=../driver.iso,media=cdrom" : "";
 
-            command = command_base + `.exe -name ${name.replace(/\s+/g, '')}  -usbdevice tablet -machine q35 -m ${ram}M -smp ${cpu} -vga ${gpu} -accel ${accel} ${smbios} ${portforward} ${drivers}`;
+            command = command_base + `.exe -name ${name.replace(/\s+/g, '')} -display sdl -usbdevice tablet -machine q35 -m ${ram}M -smp ${cpu} -vga ${gpu} -accel ${accel} ${smbios} ${portforward}`;
 
 
             console.log(hda)
@@ -42,13 +40,13 @@ async function runguest(name, ostype, osver, ram, cpu, accel, gpu, border) {
 
             if (cdrom != "" && hda != "") {
                 console.log("CD-ROM and Hard Disk attached, building command with them.")
-                command = command + ` -hda ${hda}, -cdrom ${cdrom}`
+                command = command + ` -hda "${hda}" -cdrom "${cdrom}"`
             } else if (cdrom != "") {
                 console.log("CD-ROM attached, building command with it.")
-                command = command + ` -cdrom ${cdrom} `
+                command = command + ` -cdrom "${cdrom}" `
             } else if (hda != "" ) {
                 console.log("Hard Disk attached, building command with it")
-                command = command + `-hda ${hda} `
+                command = command + `-hda "${hda}" `
             } else {
                 console.log("Nothing attached")
                 command = command

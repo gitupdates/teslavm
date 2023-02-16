@@ -1,1 +1,1 @@
-[{"guestname":"Windows 11","ostype":"windows","ram":"4906","cpu":"4","accel":"whpx","gpu":"qxl","cdrom":"C:\\Users\\Administrator\\Downloads\\kubuntu-22.10-desktop-amd64.iso","hdd":"","bootorder":"-boot order=c"}]
+[{"guestname":"Ubuntu Budgie 22.04","ostype":"linux","ram":"4170","cpu":"4","accel":"whpx","gpu":"virtio","cdrom":"C:\\Users\\Admin\\Downloads\\ubuntu-budgie-22.04.1-desktop-amd64.iso","hdd":"C:\\Users\\Admin\\TeslaVM\\Ubuntu Budgie.qcow2","bootorder":"-boot order=c"}]

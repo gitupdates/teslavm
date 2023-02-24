@@ -50,18 +50,8 @@ and much more...
 
 ## Troubleshooting
 #### I dont know how to install Hyper-V...
-
+Open Run (win + r) and type optionalfeatures, select these features
  ![image](https://user-images.githubusercontent.com/117595540/210113771-dc6acd62-7dee-4892-b10b-7ce88ebb64bc.png)
-
-#### Windows installator does not see disk
-
- ![image](https://user-images.githubusercontent.com/117595540/210115596-0ce4b690-c472-4f56-bfa1-3ee146bd3837.png)
- 
-Also it is very recommended to install virtio guest drivers after you install your Windows (for QXL GPU, Ethernet).
-
-#### Network is verryy slow
-1. Disable intel network adapter
-2. Install drivers for RedHat VirtIO Ethernet Adapter (virtio guest tools)
 
 ## FAQ
 

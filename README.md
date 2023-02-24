@@ -51,6 +51,7 @@ and much more...
 ## Troubleshooting
 #### I dont know how to install Hyper-V...
 Open Run (win + r) and type optionalfeatures, select these features
+
  ![image](https://user-images.githubusercontent.com/117595540/210113771-dc6acd62-7dee-4892-b10b-7ce88ebb64bc.png)
 
 ## FAQ

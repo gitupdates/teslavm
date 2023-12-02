@@ -48,15 +48,9 @@ and much more...
   - HAXM - Intel Hardware Accelerated Execution Manager (HAXM), you can't use it on AMD CPU. You should use it for Linux.
   - Hyper-V - Microsoft hypervisor, you can use it on every CPU which support hyper-v & VT-D,X. You should use it for Windows.
 
-## Troubleshooting
-#### I dont know how to install Hyper-V...
-Open Run (win + r) and type optionalfeatures, select these features
-
- ![image](https://user-images.githubusercontent.com/117595540/210113771-dc6acd62-7dee-4892-b10b-7ce88ebb64bc.png)
 
 ## Screenshot from app
 ![image](https://user-images.githubusercontent.com/117595540/211153897-01a6bf0f-85f7-4c82-bbcc-ee35e7281f3b.png)
-
 
 
 ## Authors

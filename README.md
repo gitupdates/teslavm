@@ -11,10 +11,10 @@ TeslaVM is graphical user interface made for QEMU for windows usage, since only 
 
 <sub>fun fact: that was random project, turned into serious one</sub>
 
-#### You cant use HAXM 7.8.0 for now. (It's not working properly)
-You should use QEMU 20221130, [HAXM 7.7.1](https://github.com/intel/haxm/releases/download/v7.7.1/haxm-windows_v7_7_1.zip) or just the included in release one's.
+#### Recommended versions
+QEMU 20231126, HAXM v7.8.0
 
-Currently only windows 8.1+ (new acpi, ahci support) are supported.
+In case of windows, only 8.1+ are supported for now.
 
 ## Installation
 #### For development

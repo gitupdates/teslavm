@@ -54,33 +54,6 @@ Open Run (win + r) and type optionalfeatures, select these features
 
  ![image](https://user-images.githubusercontent.com/117595540/210113771-dc6acd62-7dee-4892-b10b-7ce88ebb64bc.png)
 
-## FAQ
-
-**Q:** Does it support machine acceleration ?
-
-**A:** Yes it does on AMD and Intel CPU's with Linux, partially with Windows (full with Hyper-V)
-##
-**Q:** What guest OS does it support?
-
-**A:** All you dream about!
-##
-**Q:** HAX acceleration makes my machines doesnt launch! 😠
-
-**A:** Probably you dont have [HAXM](https://github.com/intel/haxm/releases/tag/v7.7.1) or you have Hyper-V [enabled](https://www.nakivo.com/blog/uninstalling-or-disabling-hyper-v-in-windows-10/).
-##
-**Q:** I cant launch machine with Hyper-V acceleration 😡
-
-**A:** You have to [install](https://learn.microsoft.com/pl-pl/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v) Hyper-V.
-##
-**Q:** I cant even launch a VM 😡😡
-
-**A:** ;Bro. You should check if your CPU supports VT-d/VT-x and if does, check if you have virtualization options enabled in BIOS. If that wasnt your problem you should check error in developer console (F11) or write to us for help (github issues)
-##
-**Q:** My windows VM keeps crashing at loading!
-
-**A:** Make sure you are using Hyper-V for windows 64/32bit or HAX for 32bit only.
-##
-
 ## Screenshot from app
 ![image](https://user-images.githubusercontent.com/117595540/211153897-01a6bf0f-85f7-4c82-bbcc-ee35e7281f3b.png)
 
